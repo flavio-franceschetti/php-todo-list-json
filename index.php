@@ -23,9 +23,9 @@
                         <li v-for="(task, index) in myList">
                             <div class="element">{{task.task}}</div>
                             <div class="btns">
-                                <div class="trash">
+                                <button class="trash">
                                     <i class="fa-solid fa-trash"></i>
-                                </div>
+                                </button>
                             </div>
                         </li>
                     </ul>
