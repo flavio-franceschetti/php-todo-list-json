@@ -1,0 +1,22 @@
+[
+  {
+    "task": "Buy groceries",
+    "completed": false
+  },
+  {
+    "task": "Finish homework",
+    "completed": true
+  },
+  {
+    "task": "Call mom",
+    "completed": false
+  },
+  {
+    "task": "Read a book",
+    "completed": true
+  },
+  {
+    "task": "Clean the house",
+    "completed": false
+  }
+]
