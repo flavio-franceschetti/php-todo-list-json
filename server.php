@@ -1,15 +1,20 @@
 <?php
 
-// 1. recuperare l'info che viene dalla richiesta
-// 2. prendere la lista delle todo dal file.json (todo.json) (con file_get_contents)
+// prendere la lista delle todo dal file.json (todo.json) (con file_get_contents)
 $string = file_get_contents('todo.json');
-// 3. trasformarla in una struttura dati che php può usare (con json_decode)
+// trasformarla in una struttura dati che php può usare (con json_decode)
 $list = json_decode($string, true);
-// 4. aggiungere la nuova todo
-// 5. trasformare l'array di nuovo in un file json (json_encode)
+// aggiungo la nuova todo se la variabile todoItem è stata settata
+if(isset($_POST['todoItem'])){
+    //creo una variabile e gli assegno i valore che viene ricevuto in post
+    $todoItem = $_POST['todoItem'];
+    //aggiungo il valore alla lista
+    $list[] = $todoItem;
+    //Sovrascrivo il file json con la lista aggiornata. Qindi con file_put_contentssalvo il nuovo json nel database todo.json ovviamente tramite json_encode il file viene prima trasformato in json per essere sovrascritto 
+    file_put_contents('todo.json', json_encode($list)); 
+}
 
-// 6. salvare il nuovo json nel file todo.json (con file_put_contents)
 //per specificare che le informazioni restituite sono di tipo json
 header('Content-Type: application/json');
-// 7. restituire il json (con echo json_encode($array))
+// restituire il json (con echo json_encode($array))
 echo json_encode($list);

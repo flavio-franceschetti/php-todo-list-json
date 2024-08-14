@@ -31,8 +31,8 @@
                     </ul>
                 </div>
                 <div class="card input-card">
-                    <input type="text" placeholder="Inserisci cose da fare">
-                    <button><i class="fa-solid fa-paper-plane"></i></button>
+                    <input @keyup.enter="updateList" v-model="userInput" type="text" placeholder="Inserisci cose da fare">
+                    <button @click="updateList"><i class="fa-solid fa-paper-plane"></i></button>
                 </div>
             </div>
         </div>
