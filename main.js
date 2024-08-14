@@ -7,6 +7,7 @@ createApp({
       apiUrl: "server.php",
       myList: [],
       userInput: "",
+      removeTask: false,
     };
   },
   methods: {
@@ -30,6 +31,22 @@ createApp({
         todoItem: {
           task: this.userInput,
         },
+      };
+      axios
+        .post(this.apiUrl, data, {
+          // headers è un oggetto che specifica che il contenuto inviato è un form
+          headers: { "Content-Type": "multipart/form-data" },
+        })
+        .then((response) => {
+          console.log(response.data);
+          this.myList = response.data;
+          this.userInput = "";
+        });
+    },
+    // metodo per la cancellazione delle task faccio un altra chiamata axios dove gli passo l'indice dell'elemento cliccato dal bottone del cestino
+    deleteTask(index) {
+      const data = {
+        deleteIndex: index,
       };
 
       axios

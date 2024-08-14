@@ -23,7 +23,7 @@
                         <li v-for="(task, index) in myList">
                             <div class="element">{{task.task}}</div>
                             <div class="btns">
-                                <button class="trash">
+                                <button @click="deleteTask(index)" class="trash">
                                     <i class="fa-solid fa-trash"></i>
                                 </button>
                             </div>
