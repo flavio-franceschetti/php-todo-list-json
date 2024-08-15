@@ -26,6 +26,17 @@ if(isset($data['deleteIndex'])){
 }
 
 
+if(isset($data['taskDoneIndex'])){
+    $taskDoneIndex = $data['taskDoneIndex'];
+   if(!$list[$taskDoneIndex]['completed']){
+    $list[$taskDoneIndex]['completed'] = true;
+   } else {
+    $list[$taskDoneIndex]['completed'] = false;
+   }
+   file_put_contents('todo.json', json_encode($list));     
+}
+
+
 
 //per specificare che le informazioni restituite sono di tipo json
 header('Content-Type: application/json');

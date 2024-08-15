@@ -50,6 +50,10 @@ h1 {
   cursor: pointer;
 }
 
+.completed-task {
+  text-decoration: line-through;
+}
+
 /* li buttons */
 .btns {
   display: flex;

@@ -7,7 +7,6 @@ createApp({
       apiUrl: "server.php",
       myList: [],
       userInput: "",
-      removeTask: false,
     };
   },
   methods: {
