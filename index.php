@@ -26,6 +26,9 @@
                                 <button v-if="myList[index].completed" @click="deleteTask(index)" class="trash">
                                     <i class="fa-solid fa-trash"></i>
                                 </button>
+                                <button class="description">
+                                    <i class="fa-solid fa-eye"></i>
+                                </button>
                             </div>
                         </li>
                     </ul>

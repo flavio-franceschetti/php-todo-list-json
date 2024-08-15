@@ -61,12 +61,19 @@ h1 {
   gap: 10px;
 }
 
-.trash {
-  color: #ff2724;
+.btns button {
   background: none;
   border: none;
   cursor: pointer;
   font-size: 16px;
+}
+
+.trash {
+  color: #ff2724;
+}
+
+.description {
+  color: rgb(232, 120, 0);
 }
 
 /* input */
