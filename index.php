@@ -20,8 +20,8 @@
                 <h1>TodoList <i class="fa-solid fa-pencil"></i></h1>
                 <div class="card">
                     <ul class="todo">
-                        <li v-for="(task, index) in myList">
-                            <div class="element">{{task.task}}</div>
+                        <li  v-for="(task, index) in myList">
+                            <div @click="taskDone(index)" class="element">{{task.task}}</div>
                             <div class="btns">
                                 <button @click="deleteTask(index)" class="trash">
                                     <i class="fa-solid fa-trash"></i>

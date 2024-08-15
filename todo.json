@@ -1,7 +1,1 @@
-[
-  { "task": "Buy groceries" },
-  { "task": "Finish homework" },
-  { "task": "Call mom" },
-  { "task": "Read a book" },
-  { "task": "Clean the house" }
-]
+[{"task":"Buy groceries","completed":false},{"task":"Finish homework","completed":false},{"task":"Call mom","completed":false},{"task":"Read a book","completed":false},{"task":"Clean the house","completed":false}]

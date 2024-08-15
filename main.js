@@ -30,12 +30,15 @@ createApp({
       const data = {
         todoItem: {
           task: this.userInput,
+          completed: false,
         },
       };
       axios
-        .post(this.apiUrl, data, {
+        .post(this.apiUrl, JSON.stringify(data), {
           // headers è un oggetto che specifica che il contenuto inviato è un form
-          headers: { "Content-Type": "multipart/form-data" },
+          // headers: { "Content-Type": "multipart/form-data" },
+          // per inviare il valore booleano di task completa o no bisogna inviare un file json perchè il form ci strasforma il booleano in stringa
+          headers: { "Content-Type": "application/json" },
         })
         .then((response) => {
           console.log(response.data);
@@ -48,11 +51,29 @@ createApp({
       const data = {
         deleteIndex: index,
       };
-
       axios
-        .post(this.apiUrl, data, {
+        .post(this.apiUrl, JSON.stringify(data), {
           // headers è un oggetto che specifica che il contenuto inviato è un form
-          headers: { "Content-Type": "multipart/form-data" },
+          // headers: { "Content-Type": "multipart/form-data" },
+          // per inviare il valore booleano di task completa o no bisogna inviare un file json perchè il form ci strasforma il booleano in stringa
+          headers: { "Content-Type": "application/json" },
+        })
+        .then((response) => {
+          console.log(response.data);
+          this.myList = response.data;
+        });
+    },
+
+    taskDone(index) {
+      const data = {
+        taskDoneIndex: index,
+      };
+      axios
+        .post(this.apiUrl, JSON.stringify(data), {
+          // headers è un oggetto che specifica che il contenuto inviato è un form
+          // headers: { "Content-Type": "multipart/form-data" },
+          // per inviare il valore booleano di task completa o no bisogna inviare un file json perchè il form ci strasforma il booleano in stringa
+          headers: { "Content-Type": "application/json" },
         })
         .then((response) => {
           console.log(response.data);
