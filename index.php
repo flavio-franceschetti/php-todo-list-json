@@ -23,7 +23,7 @@
                         <li  v-for="(task, index) in myList">
                             <div @click="taskDone(index)" :class="myList[index].completed ? 'completed-task' : ''"  class="element">{{task.task}}</div>
                             <div class="btns">
-                                <button @click="deleteTask(index)" class="trash">
+                                <button v-if="myList[index].completed" @click="deleteTask(index)" class="trash">
                                     <i class="fa-solid fa-trash"></i>
                                 </button>
                             </div>

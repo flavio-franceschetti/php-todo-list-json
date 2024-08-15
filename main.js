@@ -63,6 +63,7 @@ createApp({
         });
     },
 
+    // metodo per segnare le task completate mando la richiesta al server inviandogli anche l'indice della task cliccata per trasformare completed in true o false quando viene cliccata
     taskDone(index) {
       const data = {
         taskDoneIndex: index,

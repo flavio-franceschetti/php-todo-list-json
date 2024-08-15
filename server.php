@@ -25,7 +25,7 @@ if(isset($data['deleteIndex'])){
     file_put_contents('todo.json', json_encode($list)); 
 }
 
-
+// cambio dello stato del task completed quando viene cliccata la task
 if(isset($data['taskDoneIndex'])){
     $taskDoneIndex = $data['taskDoneIndex'];
    if(!$list[$taskDoneIndex]['completed']){
