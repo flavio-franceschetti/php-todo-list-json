@@ -20,13 +20,13 @@
                 <h1>TodoList <i class="fa-solid fa-pencil"></i></h1>
                 <div class="card">
                     <ul class="todo">
-                        <li  v-for="(task, index) in myList">
+                        <li v-for="(task, index) in myList">
                             <div @click="taskDone(index)" :class="myList[index].completed ? 'completed-task' : ''"  class="element">{{task.task}}</div>
                             <div class="btns">
                                 <button v-if="myList[index].completed" @click="deleteTask(index)" class="trash">
                                     <i class="fa-solid fa-trash"></i>
                                 </button>
-                                <button class="description">
+                                <button class="description" @click="showDescription(index)">
                                     <i class="fa-solid fa-eye"></i>
                                 </button>
                             </div>
@@ -34,7 +34,8 @@
                     </ul>
                 </div>
                 <div class="card input-card">
-                    <input @keyup.enter="updateList" v-model="userInput" type="text" placeholder="Inserisci cose da fare">
+                    <input @keyup.enter="updateList" v-model="userInput" type="text" placeholder="Inserisci Task">
+                    <input @keyup.enter="updateList" v-model="userInputDescription" type="text" placeholder="Descrizione">
                     <button @click="updateList"><i class="fa-solid fa-paper-plane"></i></button>
                 </div>
             </div>

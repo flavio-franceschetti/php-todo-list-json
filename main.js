@@ -7,6 +7,7 @@ createApp({
       apiUrl: "server.php",
       myList: [],
       userInput: "",
+      userInputDescription: "",
     };
   },
   methods: {
@@ -30,6 +31,7 @@ createApp({
         todoItem: {
           task: this.userInput,
           completed: false,
+          description: this.userInputDescription,
         },
       };
       axios
@@ -43,6 +45,7 @@ createApp({
           console.log(response.data);
           this.myList = response.data;
           this.userInput = "";
+          this.userInputDescription = "";
         });
     },
     // metodo per la cancellazione delle task faccio un altra chiamata axios dove gli passo l'indice dell'elemento cliccato dal bottone del cestino
@@ -78,6 +81,27 @@ createApp({
         .then((response) => {
           console.log(response.data);
           this.myList = response.data;
+        });
+    },
+
+    //metodo per visualizzare la descrizione
+    showDescription(index) {
+      const data = {
+        showDescriptionIndex: index,
+      };
+      axios
+        .post(this.apiUrl, JSON.stringify(data), {
+          // headers è un oggetto che specifica che il contenuto inviato è un form
+          // headers: { "Content-Type": "multipart/form-data" },
+          // per inviare il valore booleano di task completa o no bisogna inviare un file json perchè il form ci strasforma il booleano in stringa
+          headers: { "Content-Type": "application/json" },
+        })
+        .then((response) => {
+          if (response.data.redirectUrl) {
+            // console.log(window.location);
+            //window.location.href rappresenta l'URL attuale della pagina web in cui si trova l'utente quindi modificando href e inserendo il nuovo url ricevuto dalla richiesta del server vengo reindirizzato alla nuova pagina
+            window.location.href = response.data.redirectUrl;
+          }
         });
     },
   },
