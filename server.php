@@ -47,7 +47,7 @@ if(isset($data['showDescriptionIndex'])){
     $_SESSION['description'] = 'Nessuna descrizione!!!';
    }
     // Metto in una variabile l'url per il reindirizzamento alla pagina per vedere la descrizione
-    $redirectUrl = './landing.php';
+    $redirectUrl = './landing/landing.php';
    // Converto l'array PHP in una stringa JSON per restituire un JSON che include l'URL di reindirizzamento.
     echo json_encode(['redirectUrl' => $redirectUrl]);
    // inserisco exit che è fondamentale per interrompere l'esecuzione dello script in modo tale che non venga restituito inutilmente l'intero contenuto nel file JSON con header('Content-Type: application/json') e echo json_encode($list);
