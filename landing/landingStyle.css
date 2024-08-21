@@ -33,18 +33,25 @@ h1 {
   padding: 20px;
 }
 
-.back-btn {
-  background-color: #4d979b;
+.btn {
+  cursor: pointer;
+  border: none;
   padding: 10px 20px;
   border-radius: 20px;
   color: #fff;
   font-weight: bold;
   text-decoration: none;
+  margin-right: 15px;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.507);
 }
 
-.back-btn:hover {
+.back-btn:hover,
+.edit-btn:hover {
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.527);
+}
+
+.back-btn {
+  background-color: #4d979b;
 }
 
 .fa-arrow-turn-down {

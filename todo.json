@@ -1,1 +1,24 @@
-[{"task":"Fare spesa","completed":false,"description":"- Pomodori"},{"task":"Pagare le bollette","completed":false,"description":"Entro il 16\/08\/24"},{"task":"Rispondere alle mail","completed":false,"description":"Priorit\u00e0 a quelle lavorative"},{"task":"Pianificare il weekend","completed":false,"description":""},{"task":"Riordinare casa","completed":false,"description":"entro l'ora di cena"},{"task":"Finire la todoList","completed":false,"description":"Inserire il metodo per il reindirizzamento della pagina per leggere la descrizione"}]
+[
+  { "task": "Fare spesa", "completed": false, "description": "- Pomodori" },
+  {
+    "task": "Pagare le bollette",
+    "completed": false,
+    "description": "Entro il 16/08/24"
+  },
+  {
+    "task": "Rispondere alle mail",
+    "completed": false,
+    "description": "Priorit\u00e0 a quelle lavorative"
+  },
+  { "task": "Pianificare il weekend", "completed": false, "description": "" },
+  {
+    "task": "Riordinare casa",
+    "completed": false,
+    "description": "entro l'ora di cena"
+  },
+  {
+    "task": "Finire la todoList",
+    "completed": false,
+    "description": "Inserire il metodo per il reindirizzamento della pagina per leggere la descrizione"
+  }
+]

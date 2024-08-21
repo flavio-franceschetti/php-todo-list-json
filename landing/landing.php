@@ -18,15 +18,14 @@ if(isset($_SESSION['description'])){
 </head>
 <body>
     <div class="container">
-
         <!-- title -->
         <h1>Descrizione <i class="fa-solid fa-pen-to-square"></i></h1>
-        <!-- descrizione -->
-         <div class="card">
-             <p><?php echo $description ?></p>
-         </div>
-         <!-- back button -->
-         <a class="back-btn" href="../index.php"><i class="fa-solid fa-arrow-turn-down fa-rotate-90"></i> Back</a>
+        <!-- descrizione -->     
+            <div class="card">
+                <p><?php echo $description ?></p>
+            </div>
+            <!-- back button -->
+            <a class="btn back-btn" href="../index.php"><i class="fa-solid fa-arrow-turn-down fa-rotate-90"></i> Back</a>        
     </div>
 </body>
 </html>
